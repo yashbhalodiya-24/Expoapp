@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity, Appearance } from 'react-native';
 import Board from '../Component/Board';
 import { SvgXml } from 'react-native-svg';
-import {RingAnimation} from 'react-native-animation-ring';
 const Game = () => {
 
   const IconSvgXml = {
@@ -90,7 +89,6 @@ Reset:`<svg width="800px" height="800px" viewBox="0 0 48 48" version="1" xmlns="
 
   return (
     <View style={styles.container}>
-      <RingAnimation/>
       <Board board={board} onPress={handlePress} />
       {winner && <Text style={styles.winnerText}>{winner === 'Draw' ? "It's a draw!" : `Winner: ${winner}`}</Text>}
       {/* <Button title="Reset Game" onPress={resetGame} /> */}

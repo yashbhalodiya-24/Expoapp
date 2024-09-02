@@ -45,8 +45,8 @@ const Container = ({ start, end, children }: ContainerProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.values}>
-        <Label theta={start} label="BEDTIME" icon="bed" />
-        <Label theta={end} label="WAKE UP" icon="bell" />
+        <Label theta={start} label="Pikup Time" icon="address-card-o" />
+        <Label theta={end} label="Drop Time" icon="location-arrow" />
       </View>
       {children}
       <ReText style={styles.duration} text={duration} />

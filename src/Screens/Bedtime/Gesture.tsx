@@ -56,8 +56,8 @@ const Gesture = ({ start, end, startPos, endPos }: GestureProps) => {
   return (
     <PanGestureHandler onGestureEvent={onGestureEvent}>
       <Animated.View style={StyleSheet.absoluteFill}>
-        <CursorOverlay position={startPos} icon="bed" />
-        <CursorOverlay position={endPos} icon="bell" />
+        <CursorOverlay position={startPos} icon="address-book-o" />
+        <CursorOverlay position={endPos} icon="location-arrow" />
       </Animated.View>
     </PanGestureHandler>
   );

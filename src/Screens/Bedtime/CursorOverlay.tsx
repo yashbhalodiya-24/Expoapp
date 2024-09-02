@@ -30,7 +30,7 @@ const CursorOverlay = ({ position, icon }: CursorOverlayProps) => {
   });
   return (
     <Animated.View style={style}>
-      <Icon name={icon} color="#E58406" size={24} />
+      <Icon name={icon} color="#000" size={24} />
     </Animated.View>
   );
 };

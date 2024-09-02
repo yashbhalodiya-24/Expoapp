@@ -27,7 +27,7 @@ const Bedtime = () => {
   const end = useSharedValue(1.5 * Math.PI);
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Next Wake Up Only</Text>
+      <Text style={styles.title}>PickUpPointTime    DropPointTime</Text>
       <Container start={start} end={end}>
         <CircularSlider start={start} end={end} />
       </Container>

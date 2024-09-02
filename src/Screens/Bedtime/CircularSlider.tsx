@@ -48,7 +48,7 @@ const CircularSlider = ({ start, end }: CircularProps) => {
         <Defs>
           <Mask id="mask">
             <AnimatedPath
-              stroke="#FD9F07"
+              stroke="#fff000"
               strokeWidth={STROKE}
               animatedProps={animatedProps}
             />
@@ -62,5 +62,6 @@ const CircularSlider = ({ start, end }: CircularProps) => {
     </View>
   );
 };
+
 
 export default CircularSlider;

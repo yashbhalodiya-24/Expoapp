@@ -21,7 +21,7 @@ const Cursor = ({ pos }: CursorProps) => {
       r,
     };
   });
-  return <AnimatedCircle animatedProps={animatedProps} fill="#FD9F07" />;
+  return <AnimatedCircle animatedProps={animatedProps} fill="#fff" />;
 };
 
 export default Cursor;
