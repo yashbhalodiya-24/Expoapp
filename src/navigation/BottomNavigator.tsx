@@ -14,8 +14,8 @@ import Main from '../Screens/Main';
 import PhilzCoffee from '../Screens/StarCoffee';
 import Logout from '../Screens/Logout';
 import Carddetails from '../Screens/Carddetails';
-import Clock from '../Screens/Clock';
 import { Matrix } from '../Screens/matrix';
+import Product from '../Screens/Product';
 
 
 
@@ -62,8 +62,8 @@ const BottomNavigator = () => {
           source = require('../assets/home.png');
         } else if (route.name === 'Logout') {
           source = require('../assets/logout.png');
-        } else if (route.name === 'Clock') {
-          source = require('../assets/sales.png');
+        } else if (route.name === 'Products') {
+          source = require('../assets/product.png');
         } else if (route.name === 'Matrix') {
           source = require('../assets/store.png');
         }
@@ -72,7 +72,7 @@ const BottomNavigator = () => {
     })}>
       <Bottom.Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Bottom.Screen name="Logout" component={Logout} options={{ headerShown: false }} />
-      <Bottom.Screen name="Clock" component={Clock} options={{ headerShown: false }} />
+      <Bottom.Screen name="Product" component={Product} options={{ headerShown: false }} />
       <Bottom.Screen name="Matrix" component={Matrix} options={{ headerShown: false }} />
 
     </Bottom.Navigator>

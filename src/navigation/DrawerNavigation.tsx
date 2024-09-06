@@ -16,6 +16,7 @@ import Game from '../Screens/Game';
 import Bedtime from '../Screens/Bedtime';
 import Rainbow from '../Screens/rainbow/Rainbow';
 import { Story } from '../Screens/stories/Story';
+import Product from '../Screens/Product';
 // import TicTacToe from '../Screens/TicTacToe';
 
 const Drawer = createDrawerNavigator();
@@ -90,12 +91,7 @@ const DrawerNavigation = () => {
       },
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
-         {/* <Drawer.Screen  name="TicTacToe" component={TicTacToe} options={{
-      headerShown: true ,  headerStyle: {
-        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
-      },
-      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
-      /> */}
+  
             <Drawer.Screen  name="Game" component={Game} options={{
       headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
@@ -115,6 +111,12 @@ const DrawerNavigation = () => {
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
          <Drawer.Screen  name="Story" component={Story} options={{
+      headerShown: true ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      />
+            <Drawer.Screen  name="Clock" component={Clock} options={{
       headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
       },

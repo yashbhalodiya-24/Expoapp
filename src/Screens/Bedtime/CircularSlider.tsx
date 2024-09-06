@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { View } from "react-native";
 import Animated, {
   useAnimatedProps,
@@ -6,7 +6,7 @@ import Animated, {
 } from "react-native-reanimated";
 import { polar2Canvas } from "react-native-redash";
 import Svg, { Defs, Mask, Path } from "react-native-svg";
-
+import { Audio } from 'expo-av';
 import {
   SIZE,
   STROKE,
@@ -34,6 +34,26 @@ const CircularSlider = ({ start, end }: CircularProps) => {
   const endPos = useDerivedValue(() =>
     polar2Canvas({ theta: end.value, radius: R }, CENTER)
   );
+
+  const sound = useRef(new Audio.Sound());
+
+  useEffect(() => {
+    async function loadAndPlaySound() {
+      try {
+        await sound.current.loadAsync(require('./path-to-your-sound-file.mp3'));
+        await sound.current.playAsync();
+      } catch (error) {
+        console.log('Error loading or playing sound:', error);
+      }
+    }
+
+    loadAndPlaySound();
+
+    return () => {
+      sound.current.unloadAsync();
+    };
+  }, []);
+
   const animatedProps = useAnimatedProps(() => {
     const p1 = startPos.value;
     const p2 = endPos.value;
@@ -42,6 +62,7 @@ const CircularSlider = ({ start, end }: CircularProps) => {
       d: `M ${p1.x} ${p1.y} ${arc(p2.x, p2.y, duration > PI)}`,
     };
   });
+
   return (
     <View>
       <Svg width={SIZE} height={SIZE}>
@@ -62,6 +83,5 @@ const CircularSlider = ({ start, end }: CircularProps) => {
     </View>
   );
 };
-
 
 export default CircularSlider;

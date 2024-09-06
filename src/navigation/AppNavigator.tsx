@@ -23,6 +23,7 @@ import Clock from '../Screens/Clock';
 import Home from '../Screens/Home';
 import { FrostedCard } from '../Screens/FrosteCard';
 import Game from '../Screens/Game';
+import Cart from '../Screens/Cart';
 // import TicTacToe from '../Screens/TicTacToe';
 
 
@@ -61,6 +62,7 @@ const AppNavigator = () => {
       <Stack.Screen name = 'Clock' component={Clock} options={{ headerShown: false }} />
       <Stack.Screen name = 'FrostedCard' component={FrostedCard} options={{ headerShown: false }} />
       <Stack.Screen name = 'Game' component={Game} options={{ headerShown: false }} />
+      <Stack.Screen name = 'Cart' component={Cart} options={{ headerShown: true }} />
     </Stack.Navigator>
   </NavigationContainer>
   );
