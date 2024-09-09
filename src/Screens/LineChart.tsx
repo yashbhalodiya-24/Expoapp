@@ -3,6 +3,9 @@ import { LinearGradient } from 'expo-linear-gradient';
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, Dimensions, ScrollView } from 'react-native';
 import { LineChart, ProgressChart } from 'react-native-chart-kit';
+import TodoList from '../Component/Todolist';
+import { Provider } from 'react-redux';
+import { store } from '../redux/store';
 
 
 const screenWidth = Dimensions.get('window').width;
@@ -74,6 +77,7 @@ const Candlechart = () => {
     </View>
     </View>
     </LinearGradient>
+    
   );
 };
 

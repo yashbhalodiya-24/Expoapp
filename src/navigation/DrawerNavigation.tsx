@@ -17,6 +17,7 @@ import Bedtime from '../Screens/Bedtime';
 import Rainbow from '../Screens/rainbow/Rainbow';
 import { Story } from '../Screens/stories/Story';
 import Product from '../Screens/Product';
+import Reduxdemo from '../Screens/Reduxdemo';
 // import TicTacToe from '../Screens/TicTacToe';
 
 const Drawer = createDrawerNavigator();
@@ -117,6 +118,12 @@ const DrawerNavigation = () => {
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
             <Drawer.Screen  name="Clock" component={Clock} options={{
+      headerShown: true ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      />
+                <Drawer.Screen  name="Reduxdemo" component={Reduxdemo} options={{
       headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
       },
