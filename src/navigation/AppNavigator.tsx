@@ -25,6 +25,7 @@ import { FrostedCard } from '../Screens/FrosteCard';
 import Game from '../Screens/Game';
 import Cart from '../Screens/Cart';
 import Reduxdemo from '../Screens/Reduxdemo';
+import Apidemo from '../Screens/Apidemo';
 // import TicTacToe from '../Screens/TicTacToe';
 
 
@@ -65,6 +66,8 @@ const AppNavigator = () => {
       <Stack.Screen name = 'Game' component={Game} options={{ headerShown: false }} />
       <Stack.Screen name = 'Cart' component={Cart} options={{ headerShown: true }} />
       <Stack.Screen name = 'Reduxdemo' component={Reduxdemo} options={{ headerShown: true }} />
+      <Stack.Screen name = 'Apidemo' component={Apidemo} options={{ headerShown: true }} />
+
     </Stack.Navigator>
   </NavigationContainer>
   );
