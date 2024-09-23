@@ -10,6 +10,10 @@ import {
   responsiveFontSize
 } from "react-native-responsive-dimensions";
 import { LinearGradient } from 'expo-linear-gradient';
+import {ClerkProvider,SignedIn,SignedOut} from "@clerk/clerk-expo";
+import GoogleLogin from '../Component/GoogleLogin';
+
+
 
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -127,6 +131,7 @@ const LoginScreen = ({ navigation }) => {
   };
 
   return (
+ 
     <LinearGradient
     colors={[ "#f8c0c8", "#efe7d3","#d3bbdd","#ece3f0"]}
     style={styles.gradient}
@@ -167,6 +172,16 @@ const LoginScreen = ({ navigation }) => {
       <TouchableOpacity onPress={handleSignupNavigation}>
         <Text style={styles.signup}>Sign Up...!</Text>
       </TouchableOpacity>
+
+      <ClerkProvider  publishableKey={"pk_test_anVzdC13YWxsYWJ5LTQzLmNsZXJrLmFjY291bnRzLmRldiQ"}>
+        <View>
+          <TouchableOpacity>
+          <SignedIn></SignedIn>
+          <SignedOut><GoogleLogin /></SignedOut>
+          </TouchableOpacity>
+        </View>
+        </ClerkProvider>
+
       <Modal
         animationType="fade"
         transparent={true}
@@ -191,6 +206,7 @@ const LoginScreen = ({ navigation }) => {
       </Modal>
     </View>
     </LinearGradient>
+  
   );
 };
 

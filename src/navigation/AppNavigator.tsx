@@ -26,6 +26,7 @@ import Game from '../Screens/Game';
 import Cart from '../Screens/Cart';
 import Reduxdemo from '../Screens/Reduxdemo';
 import Apidemo from '../Screens/Apidemo';
+import GoogleLogin from '../Component/GoogleLogin';
 // import TicTacToe from '../Screens/TicTacToe';
 
 
@@ -48,10 +49,12 @@ const AppNavigator = () => {
   }, []);
   return (
     <NavigationContainer>
+      
     <Stack.Navigator>
       <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
       <Stack.Screen name='Home' component={Home} options={{ headerShown: false, }} />
       <Stack.Screen name='Parent' component={Parent} options={{ headerShown: false }} />
+      
       <Stack.Screen name = 'login' component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name = 'Logout' component={Logout} options={{ headerShown: false }} />
       <Stack.Screen name = 'Signup' component={Signup} options={{ headerShown: false }} />
@@ -67,6 +70,7 @@ const AppNavigator = () => {
       <Stack.Screen name = 'Cart' component={Cart} options={{ headerShown: true }} />
       <Stack.Screen name = 'Reduxdemo' component={Reduxdemo} options={{ headerShown: true }} />
       <Stack.Screen name = 'Apidemo' component={Apidemo} options={{ headerShown: true }} />
+      <Stack.Screen name = 'GoogleLogin' component={GoogleLogin} options={{ headerShown: true }} />
 
     </Stack.Navigator>
   </NavigationContainer>

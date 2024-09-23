@@ -9,6 +9,7 @@ import {
   responsiveFontSize
 } from "react-native-responsive-dimensions";
 import { LinearGradient } from 'expo-linear-gradient';
+
 const Logout = ({ navigation }) => {
   const [isDarkMode, setIsDarkMode] = useState(Appearance.getColorScheme() === 'dark');
   const [isLoading, setIsLoading] = useState(false);
@@ -53,13 +54,11 @@ const Logout = ({ navigation }) => {
   };
 
   const confirmLogout = () => {
-    setIsModalVisible(true);
+    setIsModalVisible(true); // Show the modal
   };
 
   const scale1 = useSharedValue(1);
   const scale2 = useSharedValue(1);
-  const scale3 = useSharedValue(1);
-  const scale4 = useSharedValue(1);
 
   const handlePressIn = (scale) => {
     scale.value = withSpring(0.8);
@@ -81,95 +80,81 @@ const Logout = ({ navigation }) => {
     };
   });
 
-  const animatedStyle3 = useAnimatedStyle(() => {
-    return {
-      transform: [{ scale: scale3.value }],
-    };
-  });
-
-  const animatedStyle4 = useAnimatedStyle(() => {
-    return {
-      transform: [{ scale: scale4.value }],
-    };
-  });
-
   return (
     <LinearGradient
-    colors={[ "#f8c0c8", "#efe7d3","#d3bbdd","#ece3f0"]}
-    style={styles.gradient}
-  >
-    <View style={[styles.container]}>
-      <Text style={[styles.message, { color: isDarkMode ? APP_COLORS.white : APP_COLORS.black }]}>
-        Are you sure you want to logout?
-      </Text>
-      <View style={styles.buttonContainer}>
-      <Animated.View style={[{ margin: 10 }, animatedStyle1]}>
-        <TouchableOpacity
-          style={[styles.logout, { backgroundColor: isDarkMode ? APP_COLORS.white : APP_COLORS.gray }]}
-          onPressIn={() => handlePressIn(scale1)}
-          onPressOut={() => handlePressOut(scale1)}
-          onPress={confirmLogout}
-          disabled={isLoading}
-        >
-          {isLoading ? (
-            <ActivityIndicator color={isDarkMode ? APP_COLORS.black : APP_COLORS.white} />
-          ) : (
-            <Text style={{    fontSize: responsiveFontSize(1.8),
-              color: isDarkMode ? APP_COLORS.black : APP_COLORS.white }}>Logout</Text>
-          )}
-        </TouchableOpacity>
-        </Animated.View>
+      colors={["#f8c0c8", "#efe7d3", "#d3bbdd", "#ece3f0"]}
+      style={styles.gradient}
+    >
+      <View style={[styles.container]}>
+        <Text style={[styles.message, { color: isDarkMode ? APP_COLORS.white : APP_COLORS.black }]}>
+          Are you sure you want to logout?
+        </Text>
+        <View style={styles.buttonContainer}>
+          <Animated.View style={[{ margin: 10 }, animatedStyle1]}>
+            <TouchableOpacity
+              style={[styles.logout, { backgroundColor: isDarkMode ? APP_COLORS.white : APP_COLORS.gray }]}
+              onPressIn={() => handlePressIn(scale1)}
+              onPressOut={() => handlePressOut(scale1)}
+              onPress={confirmLogout}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <ActivityIndicator color={isDarkMode ? APP_COLORS.black : APP_COLORS.white} />
+              ) : (
+                <Text style={{ fontSize: responsiveFontSize(1.8), color: isDarkMode ? APP_COLORS.black : APP_COLORS.white }}>Logout</Text>
+              )}
+            </TouchableOpacity>
+          </Animated.View>
 
-        <Animated.View style={[{ margin: 10 }, animatedStyle2]}>
-        <TouchableOpacity
-          style={[styles.logout, { backgroundColor: isDarkMode ? APP_COLORS.white : '#333' }]}
-          onPressIn={() => handlePressIn(scale2)}
-          onPressOut={() => handlePressOut(scale2)}
-          onPress={handleCancel}
-          disabled={isLoading}
-        >
-          {showLoader ? (
-            <ActivityIndicator color={isDarkMode ? APP_COLORS.black : APP_COLORS.white} />
-          ) : (
-            <Text style={{    fontSize: responsiveFontSize(1.8),
-              color: isDarkMode ? APP_COLORS.black : APP_COLORS.white }}>Cancel</Text>
-          )}
-        </TouchableOpacity>
-        </Animated.View>
-      </View>
+          <Animated.View style={[{ margin: 10 }, animatedStyle2]}>
+            <TouchableOpacity
+              style={[styles.logout, { backgroundColor: isDarkMode ? APP_COLORS.white : '#333' }]}
+              onPressIn={() => handlePressIn(scale2)}
+              onPressOut={() => handlePressOut(scale2)}
+              onPress={handleCancel}
+              disabled={isLoading}
+            >
+              {showLoader ? (
+                <ActivityIndicator color={isDarkMode ? APP_COLORS.black : APP_COLORS.white} />
+              ) : (
+                <Text style={{ fontSize: responsiveFontSize(1.8), color: isDarkMode ? APP_COLORS.black : APP_COLORS.white }}>Cancel</Text>
+              )}
+            </TouchableOpacity>
+          </Animated.View>
+        </View>
 
-      <Modal
-        animationType="slide"
-        transparent={true}
-        visible={isModalVisible}
-        onRequestClose={() => {
-          setIsModalVisible(!isModalVisible);
-        }}
-      >
-        <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
-            <Text style={styles.modalText}>Do you really want to logout?</Text>
-            <View style={styles.modalButtonContainer}>
-              <TouchableOpacity
-                style={[styles.modalButton, styles.modalButtonYes]}
-                onPress={() => {
-                  setIsModalVisible(false);
-                  handleLogout();
-                }}
-              >
-                <Text style={styles.modalButtonText}>Yes</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={[styles.modalButton, styles.modalButtonNo]}
-                onPress={() => setIsModalVisible(false)}
-              >
-                <Text style={styles.modalButtonText}>No</Text>
-              </TouchableOpacity>
+        {/* Logout confirmation modal */}
+        <Modal
+          animationType="slide"
+          transparent={true}
+          visible={isModalVisible}
+          onRequestClose={() => setIsModalVisible(false)}
+        >
+          <View style={styles.modalContainer}>
+            <View style={styles.modalContent}>
+              <Text style={styles.modalText}>Do you really want to logout?</Text>
+              <View style={styles.modalButtonContainer}>
+                <TouchableOpacity
+                  style={[styles.modalButton, styles.modalButtonYes]}
+                  onPress={() => {
+                    setIsModalVisible(false); // Close the modal
+                    handleLogout();
+                     // Proceed to logout
+                  }}
+                >
+                  <Text style={styles.modalButtonText}>Yes</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.modalButton, styles.modalButtonNo]}
+                  onPress={() => setIsModalVisible(false)} // Just close the modal
+                >
+                  <Text style={styles.modalButtonText}>No</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
-        </View>
-      </Modal>
-    </View>
+        </Modal>
+      </View>
     </LinearGradient>
   );
 };
@@ -184,7 +169,7 @@ const styles = StyleSheet.create({
     fontSize: responsiveFontSize(3),
     marginBottom: responsiveHeight(3),
   },
-  gradient:{
+  gradient: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -206,7 +191,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
   },
   modalContent: {
-    width:  responsiveWidth(80),
+    width: responsiveWidth(80),
     padding: responsiveWidth(5),
     backgroundColor: 'white',
     borderRadius: responsiveHeight(2),
