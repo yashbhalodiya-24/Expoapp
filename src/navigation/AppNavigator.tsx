@@ -27,6 +27,7 @@ import Cart from '../Screens/Cart';
 import Reduxdemo from '../Screens/Reduxdemo';
 import Apidemo from '../Screens/Apidemo';
 import GoogleLogin from '../Component/GoogleLogin';
+import Graphql from '../Screens/Graphql';
 // import TicTacToe from '../Screens/TicTacToe';
 
 
@@ -71,6 +72,7 @@ const AppNavigator = () => {
       <Stack.Screen name = 'Reduxdemo' component={Reduxdemo} options={{ headerShown: true }} />
       <Stack.Screen name = 'Apidemo' component={Apidemo} options={{ headerShown: true }} />
       <Stack.Screen name = 'GoogleLogin' component={GoogleLogin} options={{ headerShown: true }} />
+      <Stack.Screen name = 'Graphql' component={Graphql} options={{ headerShown: true }} />
 
     </Stack.Navigator>
   </NavigationContainer>
@@ -79,3 +81,11 @@ const AppNavigator = () => {
 }
 
 export default AppNavigator;
+
+
+
+// APOLLO_KEY=service:expoapp:xVapIPO1QCIgA7kVIEzBNQ \
+//   rover subgraph publish expoapp@current \
+//   --schema ./products-schema.graphql \
+//   --name your-subgraph-name \
+//   --routing-url http://products.prod.svc.cluster.local:4001/graphql

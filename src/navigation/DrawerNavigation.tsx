@@ -19,6 +19,9 @@ import { Story } from '../Screens/stories/Story';
 import Product from '../Screens/Product';
 import Reduxdemo from '../Screens/Reduxdemo';
 import Apidemo from '../Screens/Apidemo';
+import Graph from '../Screens/rainbow/Graph';
+import Graphql from '../Screens/Graphql';
+import Videoplayer from '../Screens/Videoplayer';
 // import TicTacToe from '../Screens/TicTacToe';
 
 const Drawer = createDrawerNavigator();
@@ -131,6 +134,18 @@ const DrawerNavigation = () => {
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
          <Drawer.Screen  name="Apidemo" component={Apidemo} options={{
+      headerShown: true ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      />
+       <Drawer.Screen  name="Graphql" component={Graphql} options={{
+      headerShown: true ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      />
+          <Drawer.Screen  name="Videoplayer" component={Videoplayer} options={{
       headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
       },
