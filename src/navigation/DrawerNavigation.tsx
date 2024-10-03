@@ -22,6 +22,8 @@ import Apidemo from '../Screens/Apidemo';
 import Graph from '../Screens/rainbow/Graph';
 import Graphql from '../Screens/Graphql';
 import Videoplayer from '../Screens/Videoplayer';
+import Chat from '../Screens/Chat';
+
 // import TicTacToe from '../Screens/TicTacToe';
 
 const Drawer = createDrawerNavigator();
@@ -151,6 +153,12 @@ const DrawerNavigation = () => {
       },
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
+         {/* <Drawer.Screen  name="Chat" component={Chat} options={{
+      headerShown: false ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      /> */}
     </Drawer.Navigator>
   </View>
   );

@@ -28,8 +28,11 @@ import Reduxdemo from '../Screens/Reduxdemo';
 import Apidemo from '../Screens/Apidemo';
 import GoogleLogin from '../Component/GoogleLogin';
 import Graphql from '../Screens/Graphql';
-// import TicTacToe from '../Screens/TicTacToe';
+import Chat from '../Screens/Chat';
 
+
+// import TicTacToe from '../Screens/TicTacToe';
+import ChatContextProvider from "../../context/ChatContext";
 
 const Stack = createStackNavigator();
 
@@ -49,8 +52,8 @@ const AppNavigator = () => {
     };
   }, []);
   return (
+   
     <NavigationContainer>
-      
     <Stack.Navigator>
       <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
       <Stack.Screen name='Home' component={Home} options={{ headerShown: false, }} />
@@ -73,12 +76,37 @@ const AppNavigator = () => {
       <Stack.Screen name = 'Apidemo' component={Apidemo} options={{ headerShown: true }} />
       <Stack.Screen name = 'GoogleLogin' component={GoogleLogin} options={{ headerShown: true }} />
       <Stack.Screen name = 'Graphql' component={Graphql} options={{ headerShown: true }} />
-
+  
     </Stack.Navigator>
   </NavigationContainer>
+ 
   );
+
+
+
+  // return (
+  //   <ChatContextProvider>
+  //     <Stack.Navigator>
+  //       <Stack.Screen
+  //         name="Root"
+  //         component={BottomTabNavigator}
+  //         options={{ headerShown: false }}
+  //       />
+  //       <Stack.Screen
+  //         name="NotFound"
+  //         component={NotFoundScreen}
+  //         options={{ title: "Oops!" }}
+  //       />
+  //     </Stack.Navigator>
+  //   </ChatContextProvider>
+  // );
+
   ;
 }
+
+
+
+
 
 export default AppNavigator;
 
