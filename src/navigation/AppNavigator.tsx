@@ -29,10 +29,12 @@ import Apidemo from '../Screens/Apidemo';
 import GoogleLogin from '../Component/GoogleLogin';
 import Graphql from '../Screens/Graphql';
 import Chat from '../Screens/Chat';
-
+// import Youtubeshort from '../Screens/Youtubeshort';
 
 // import TicTacToe from '../Screens/TicTacToe';
 import ChatContextProvider from "../../context/ChatContext";
+import Menuupdate from '../Component/menuupdate';
+import updatefirebse from '../Screens/updatefirebse';
 
 const Stack = createStackNavigator();
 
@@ -76,6 +78,8 @@ const AppNavigator = () => {
       <Stack.Screen name = 'Apidemo' component={Apidemo} options={{ headerShown: true }} />
       <Stack.Screen name = 'GoogleLogin' component={GoogleLogin} options={{ headerShown: true }} />
       <Stack.Screen name = 'Graphql' component={Graphql} options={{ headerShown: true }} />
+      {/* <Stack.Screen name = 'Youtubeshort' component={Youtubeshort} options={{ headerShown: true }} /> */}
+
   
     </Stack.Navigator>
   </NavigationContainer>

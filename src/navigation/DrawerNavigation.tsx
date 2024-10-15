@@ -23,6 +23,7 @@ import Graph from '../Screens/rainbow/Graph';
 import Graphql from '../Screens/Graphql';
 import Videoplayer from '../Screens/Videoplayer';
 import Chat from '../Screens/Chat';
+// import Youtubeshort from '../Screens/Youtubeshort';
 
 // import TicTacToe from '../Screens/TicTacToe';
 
@@ -155,6 +156,12 @@ const DrawerNavigation = () => {
       />
          {/* <Drawer.Screen  name="Chat" component={Chat} options={{
       headerShown: false ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      /> */}
+                {/* <Drawer.Screen  name="Youtubeshort" component={Youtubeshort} options={{
+      headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
       },
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}

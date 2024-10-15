@@ -16,9 +16,10 @@ import Logout from '../Screens/Logout';
 import Carddetails from '../Screens/Carddetails';
 import { Matrix } from '../Screens/matrix';
 import Product from '../Screens/Product';
-import ChatStackNavigation from './ChatStackNavigation';
+// import ChatStackNavigation from './ChatStackNavigation';
 import Chat from '../Screens/Chat';
 import ChatContextProvider from '../../context/ChatContext';
+// import Youtubeshort from '../Screens/Youtubeshort';
 
 
 
@@ -65,7 +66,7 @@ const BottomNavigator = () => {
           source = require('../assets/home.png');
         } else if (route.name === 'Logout') {
           source = require('../assets/logout.png');
-        } else if (route.name === 'ChatStackNavigation') {
+        } else if (route.name === 'Youtubeshort') {
           source = require('../assets/new.png');
         } else if (route.name === 'Matrix') {
           source = require('../assets/store.png');
@@ -75,7 +76,6 @@ const BottomNavigator = () => {
     })}>
       <Bottom.Screen name="Home" component={Home} options={{ headerShown: false }} />
       <Bottom.Screen name="Logout" component={Logout} options={{ headerShown: false }} />
-      <Bottom.Screen name="Chat" component={ChatStackNavigation} options={{ headerShown: false }} />
       <Bottom.Screen name="Matrix" component={Matrix} options={{ headerShown: false }} />
 
     </Bottom.Navigator>
