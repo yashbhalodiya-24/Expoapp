@@ -1,20 +1,21 @@
-import React from "react";
-import { useChatContext } from "../../context/ChatContext";
-import { ChannelList } from "stream-chat-expo";
-import { Channel } from "stream-chat";
-import { useNavigation } from "@react-navigation/native";
+// import React, { useEffect } from 'react';
+// import { View, Text, Button, ActivityIndicator } from 'react-native';
+// // import useStore from './src/store';
 
-const Chat = () => {
-  const {setCurrentChannel} = useChatContext();
+// const DataComponent = () => {
+//   const { data, fetchData, isLoading } = useStore();
 
-  const navigation = useNavigation();
+//   useEffect(() => {
+//     fetchData(); // Fetch data on component mount
+//   }, []);
 
-  const onSelect = (chanel: Channel) => {
-    setCurrentChannel(chanel);
-    // navigation.navigate("ChatRoom");
-  };
+//   return (
+//     <View style={{ padding: 20 }}>
+//       {isLoading ? <ActivityIndicator size="large" color="#0000ff" /> : (
+//         data ? <Text>{JSON.stringify(data)}</Text> : <Text>No data available</Text>
+//       )}
+//     </View>
+//   );
+// };
 
-  return <ChannelList onSelect={onSelect} />;
-};
-
-export default Chat;
+// export default DataComponent;

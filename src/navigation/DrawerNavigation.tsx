@@ -22,7 +22,9 @@ import Apidemo from '../Screens/Apidemo';
 import Graph from '../Screens/rainbow/Graph';
 import Graphql from '../Screens/Graphql';
 import Videoplayer from '../Screens/Videoplayer';
-import Chat from '../Screens/Chat';
+// import Chat from '../Screens/Chat';
+import ZustandDemo from '../Screens/ZustandDemo';
+import Zusttodo from '../Screens/Zusttodo';
 // import Youtubeshort from '../Screens/Youtubeshort';
 
 // import TicTacToe from '../Screens/TicTacToe';
@@ -154,18 +156,18 @@ const DrawerNavigation = () => {
       },
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
-         {/* <Drawer.Screen  name="Chat" component={Chat} options={{
-      headerShown: false ,  headerStyle: {
-        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
-      },
-      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
-      /> */}
-                {/* <Drawer.Screen  name="Youtubeshort" component={Youtubeshort} options={{
+         <Drawer.Screen  name="Zusttodo" component={Zusttodo} options={{
       headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
       },
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
-      /> */}
+      />
+                <Drawer.Screen  name="ZustandDemo" component={ZustandDemo} options={{
+      headerShown: true ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      />
     </Drawer.Navigator>
   </View>
   );
