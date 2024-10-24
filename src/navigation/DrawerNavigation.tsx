@@ -25,6 +25,7 @@ import Videoplayer from '../Screens/Videoplayer';
 // import Chat from '../Screens/Chat';
 import ZustandDemo from '../Screens/ZustandDemo';
 import Zusttodo from '../Screens/Zusttodo';
+import Auth0login from '../Screens/Auth0login';
 // import Youtubeshort from '../Screens/Youtubeshort';
 
 // import TicTacToe from '../Screens/TicTacToe';
@@ -163,6 +164,13 @@ const DrawerNavigation = () => {
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
                 <Drawer.Screen  name="ZustandDemo" component={ZustandDemo} options={{
+      headerShown: true ,  headerStyle: {
+        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
+      },
+      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
+      />
+      
+      <Drawer.Screen  name="Auth0login" component={Auth0login} options={{
       headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
       },

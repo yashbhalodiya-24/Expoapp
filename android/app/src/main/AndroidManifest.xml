@@ -26,6 +26,16 @@
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" android:exported="false"/>
+<activity
+  android:name="com.auth0.react.A0Auth0Activity"
+  android:launchMode="singleTask">
+  <intent-filter>
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data android:scheme="expoapp" android:host="5nmmfA8VlWPhqfyf3MKYDlZq5LazdvLg" />
+  </intent-filter>
+</activity>
 
 <meta-data
    android:name="com.google.android.geo.API_KEY"
