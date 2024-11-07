@@ -1,0 +1,96 @@
+export const markers =[
+
+{
+  latitude:43.7391,
+  longitude:7.4281,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Casino de Monte-Carlo',
+},
+{
+  latitude:43.73082,
+  longitude:7.42558,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Musée océanographique de Monaco',
+},
+{
+  latitude:43.7390,
+  longitude:7.4275,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Hotel de Paris Monte-Carlo',
+},
+{
+  latitude: 43.7311,
+  longitude:7.4202,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Prince Palace of Monaco',
+},
+{
+  latitude:24.4612,
+  longitude:54.3180,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Emirates Palace Mandarin Oriental',
+},
+{
+  latitude:25.1972,
+  longitude:55.2744,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Burj Khalifa',
+},
+{
+  latitude:25.1412,
+  longitude:55.1852,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Burj Al Arab ',
+},
+{
+  latitude:55.7558,
+  longitude: 37.6173,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Moscow',
+},
+{
+  latitude:51.1657,
+  longitude: 10.4515,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Germany',
+},
+{
+  latitude:36.1716,
+  longitude:-115.1391,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Las Vegas',
+},
+{
+  latitude:-26.853388,
+  longitude:133.275154,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Australia',
+},
+{
+  latitude:-76.299965,
+  longitude:-148.003021,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Antarctica',
+},
+{
+  latitude:61.5350,
+  longitude:105.3188,
+  latitudeDelta:0.1,
+  longitudeDelta:0.1,
+  name:'Russia',
+},
+
+
+];

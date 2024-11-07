@@ -34,6 +34,7 @@ import Graphql from '../Screens/Graphql';
 // import TicTacToe from '../Screens/TicTacToe';
 import ChatContextProvider from "../../context/ChatContext";
 import ZustandDemo from '../Screens/ZustandDemo';
+import Googlemap from '../Screens/Googlemap';
 // import Menuupdate from '../Component/menuupdate';
 // import updatefirebse from '../Screens/updatefirebse';
 
@@ -61,7 +62,6 @@ const AppNavigator = () => {
       <Stack.Screen name='Splash' component={Splash} options={{ headerShown: false }} />
       <Stack.Screen name='Home' component={Home} options={{ headerShown: false, }} />
       <Stack.Screen name='Parent' component={Parent} options={{ headerShown: false }} />
-      
       <Stack.Screen name = 'login' component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name = 'Logout' component={Logout} options={{ headerShown: false }} />
       <Stack.Screen name = 'Signup' component={Signup} options={{ headerShown: false }} />
@@ -80,7 +80,6 @@ const AppNavigator = () => {
       <Stack.Screen name = 'GoogleLogin' component={GoogleLogin} options={{ headerShown: true }} />
       <Stack.Screen name = 'Graphql' component={Graphql} options={{ headerShown: true }} />
       <Stack.Screen name = 'ZustandDemo' component={ZustandDemo} options={{ headerShown: true }} />
-
   
     </Stack.Navigator>
   </NavigationContainer>
