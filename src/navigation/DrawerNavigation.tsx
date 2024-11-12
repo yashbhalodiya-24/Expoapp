@@ -25,7 +25,6 @@ import Videoplayer from '../Screens/Videoplayer';
 // import Chat from '../Screens/Chat';
 import ZustandDemo from '../Screens/ZustandDemo';
 import Zusttodo from '../Screens/Zusttodo';
-import Auth0login from '../Screens/Auth0login';
 import Googlemap from '../Screens/Googlemap';
 
 const Drawer = createDrawerNavigator();
@@ -168,12 +167,6 @@ const DrawerNavigation = () => {
       headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
       />
       
-      <Drawer.Screen  name="Auth0login" component={Auth0login} options={{
-      headerShown: true ,  headerStyle: {
-        backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color
-      },
-      headerTintColor: isDarkMode ? APP_COLORS.black : APP_COLORS.white,}}
-      />
        <Drawer.Screen  name="Googlemap" component={Googlemap} options={{
       headerShown: true ,  headerStyle: {
         backgroundColor: isDarkMode ?APP_COLORS.white : APP_COLORS.black, // Set header background color

@@ -5,6 +5,20 @@
     "version": "1.0.0",
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "c2485313-33ef-41cb-8bf3-147692e55432"
+      }
+    },
+    "android": {
+      "package": "your.package.name",
+      "config": {
+        "googleMaps": {
+          "apiKey": "your google maps API Key Here"
+        }
+      },
+      "scheme": "expoapp" 
+    }
   }
 }
