@@ -12,9 +12,7 @@
       }
     },
     "android": {
-      "package": "com.expoapp",
-
-      "scheme": "expoapp" 
+      "package": "com.expoapp" 
     }
   }
 }
