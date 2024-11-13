@@ -12,12 +12,8 @@
       }
     },
     "android": {
-      "package": "your.package.name",
-      "config": {
-        "googleMaps": {
-          "apiKey": "your google maps API Key Here"
-        }
-      },
+      "package": "com.expoapp",
+
       "scheme": "expoapp" 
     }
   }

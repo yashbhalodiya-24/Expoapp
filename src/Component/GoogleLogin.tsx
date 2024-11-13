@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity,Image } from 'react-native'
+import {View, Text, TouchableOpacity,Image } from 'react-native';
 import React from 'react'
 import { useWarmUpBrowser } from '../../hooks/warmUpBrowser';
 import { useOAuth } from '@clerk/clerk-expo';
@@ -17,7 +17,6 @@ const onPress = React.useCallback(async()=>{
     await startOAuthFlow();
     if (createdSessionId){
       setActive({session:createdSessionId});
-      navigation.navigate('Parent');
     } else {
 // signin and signup
     }
